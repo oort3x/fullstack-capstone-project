@@ -14,7 +14,7 @@ app.use(expressPino);
 // Define the sentiment analysis route
 app.post('/sentiment', async (req, res) => {
     const { sentence } = req.query;
-
+    // TODO: Check if this should be: const { sentence } = req.body;
 
     if (!sentence) {
         logger.error('No sentence provided');
